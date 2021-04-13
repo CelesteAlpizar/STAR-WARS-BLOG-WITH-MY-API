@@ -1,0 +1,30 @@
+/* 
+    General Styles
+*/
+.navbar, .footer {
+background-color: black;
+}
+
+footer {
+  position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  height: 150px;
+  clear:both;
+  padding-top:20px;
+}
+
+.d-flex{
+    background-image: url("https://i.redd.it/bp3ieb94av631.jpg");
+    background-size: cover;
+}
+
+.card-body{
+    background-color: black;
+    color: blanchedalmond;
+}
+
+.nav-link{
+    background-color: black;
+    border-radius: 5px;
+}
+
