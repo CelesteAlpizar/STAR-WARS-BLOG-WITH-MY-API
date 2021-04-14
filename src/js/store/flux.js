@@ -8,7 +8,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			// Use getActions to call a function within a fuction
 			getCharacters: async () => {
-				await fetch("https://swapi.dev/api/people/", {
+				await fetch("https://3000-teal-reptile-9qdk01ez.ws-us03.gitpod.io/characters", {
 					method: "GET",
 					headers: {
 						"Content-Type": "aplication/json"
@@ -18,7 +18,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return res.json();
 					})
 					.then(data => {
-						setStore({ characters: data.results });
+						setStore({ characters: data });
 					})
 					.catch(error => console.log(error, "error"));
 				/**
@@ -26,7 +26,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				*/
 			},
 			getPlanets: async () => {
-				await fetch("https://swapi.dev/api/planets/", {
+				await fetch("https://3000-teal-reptile-9qdk01ez.ws-us03.gitpod.io/planets", {
 					method: "GET",
 					headers: {
 						"Content-Type": "aplication/json"
@@ -36,7 +36,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return res.json();
 					})
 					.then(data => {
-						setStore({ planets: data.results });
+						setStore({ planets: data });
 					})
 					.catch(error => console.log(error, "error"));
 			},
